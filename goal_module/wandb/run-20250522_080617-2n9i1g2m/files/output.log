@@ -1,0 +1,203 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1. Train batches: 100%|####################################9| 467/468 [05:31<00:00,  1.47it/s]
+Epoch 1. Train batches: 100%|#####################################| 468/468 [05:32<00:00,  1.41it/s]
+
+
+
+
+
+
+Epoch 2. Train batches:   4%|#6                                    | 20/468 [00:17<06:35,  1.13it/s]
+Traceback (most recent call last):
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/models/model_utils/U_net_CNN.py", line 131, in forward
+    x = torch.cat([x, enc_ftrs, vis_ftrs], dim=1)
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 176 but got size 180 for tensor number 1 in the list.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/main.py", line 38, in <module>
+    main()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/utils.py", line 143, in timed_func
+    result = function(*args, **kw)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/main.py", line 31, in main
+    processor.train_test()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 238, in train_test
+    self.train()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 231, in train
+    self._train_loop(start_epoch=start_epoch,
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 272, in _train_loop
+    train_losses, train_metrics = self._train_epoch(epoch)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 404, in _train_epoch
+    all_outputs, all_aux_outputs = self.net.forward(inputs, if_test=False)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/models/VisSem.py", line 193, in forward
+    goal_logit_map_start = self.goal_module(input_goal_module, rgb_image)
+  File "/opt/conda/envs/GoalSAR/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/models/model_utils/U_net_CNN.py", line 203, in forward
+    out = self.decoder(enc_ftrs[0], enc_ftrs[1:], vis_ftrs[1:])
+  File "/opt/conda/envs/GoalSAR/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/models/model_utils/U_net_CNN.py", line 131, in forward
+    x = torch.cat([x, enc_ftrs, vis_ftrs], dim=1)
+KeyboardInterrupt

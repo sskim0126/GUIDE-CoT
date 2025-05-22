@@ -1,0 +1,20 @@
+
+Epoch 1. Train batches:   0%|                                               | 0/468 [00:05<?, ?it/s]
+Traceback (most recent call last):
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/main.py", line 38, in <module>
+    main()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/utils.py", line 143, in timed_func
+    result = function(*args, **kw)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/main.py", line 31, in main
+    processor.train_test()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 238, in train_test
+    self.train()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 231, in train
+    self._train_loop(start_epoch=start_epoch,
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 272, in _train_loop
+    train_losses, train_metrics = self._train_epoch(epoch)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 414, in _train_epoch
+    losses = self.net.compute_model_losses(
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/models/VisSem.py", line 140, in compute_model_losses
+    goal_BCE_loss = Goal_BCE_loss(
+NameError: name 'Goal_BCE_loss' is not defined

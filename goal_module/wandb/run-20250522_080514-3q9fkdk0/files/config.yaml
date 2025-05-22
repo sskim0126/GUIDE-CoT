@@ -1,0 +1,177 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.14
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.6
+    start_time: 1747901114
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 16
+      4: 3.9.6
+      5: 0.12.14
+      8:
+      - 5
+add_noise_traj:
+  desc: null
+  value: true
+arc_angle:
+  desc: null
+  value: null
+base_dir:
+  desc: null
+  value: .
+batch_size:
+  desc: null
+  value: 64
+clip:
+  desc: null
+  value: 1
+compute_test_nll:
+  desc: null
+  value: true
+compute_valid_nll:
+  desc: null
+  value: false
+config:
+  desc: null
+  value: ./output/eth/VisSem/config_train_test.yaml
+data_augmentation:
+  desc: null
+  value: true
+dataset:
+  desc: null
+  value: eth5
+device:
+  desc: null
+  value: cuda:0
+down_factor:
+  desc: null
+  value: 4.0
+eval_every:
+  desc: null
+  value: 1
+fast_debug:
+  desc: null
+  value: false
+fast_debug_num:
+  desc: null
+  value: 3
+gamma:
+  desc: null
+  value: 0.95
+learning_rate:
+  desc: null
+  value: 0.0001
+load_checkpoint:
+  desc: null
+  value: null
+model_dir:
+  desc: null
+  value: ./output/eth/VisSem
+model_name:
+  desc: null
+  value: VisSem
+num_epochs:
+  desc: null
+  value: 50
+num_test_runs:
+  desc: null
+  value: 5
+num_test_samples:
+  desc: null
+  value: 20
+num_valid_samples:
+  desc: null
+  value: 20
+obs_length:
+  desc: null
+  value: 8
+optimizer:
+  desc: null
+  value: Adam
+phase:
+  desc: null
+  value: train_test
+pred_length:
+  desc: null
+  value: 12
+prompt_color:
+  desc: null
+  value: red
+prompt_type:
+  desc: null
+  value: arrow
+reproducibility:
+  desc: null
+  value: true
+sampler_temperature:
+  desc: null
+  value: 1.2
+save_base_dir:
+  desc: null
+  value: output
+save_dir:
+  desc: null
+  value: ./output/eth
+save_every:
+  desc: null
+  value: 10
+scheduler:
+  desc: null
+  value: ExponentialLR
+seq_length:
+  desc: null
+  value: 20
+shift_last_obs:
+  desc: null
+  value: true
+shuffle_test_batches:
+  desc: null
+  value: false
+shuffle_train_batches:
+  desc: null
+  value: true
+skip_ts_window:
+  desc: null
+  value: 5
+start_validation:
+  desc: null
+  value: 5
+std:
+  desc: null
+  value: 64
+test_set:
+  desc: null
+  value: eth
+traj_normalization:
+  desc: null
+  value: 16
+use_cuda:
+  desc: null
+  value: true
+use_ttst:
+  desc: null
+  value: true
+use_wandb:
+  desc: null
+  value: true
+validate_every:
+  desc: null
+  value: 1

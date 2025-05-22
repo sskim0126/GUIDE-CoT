@@ -1,0 +1,20 @@
+
+Epoch 1. Train batches:   0%|                                               | 0/468 [00:06<?, ?it/s]
+Traceback (most recent call last):
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/main.py", line 38, in <module>
+    main()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/utils.py", line 143, in timed_func
+    result = function(*args, **kw)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/main.py", line 31, in main
+    processor.train_test()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 238, in train_test
+    self.train()
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 231, in train
+    self._train_loop(start_epoch=start_epoch,
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 272, in _train_loop
+    train_losses, train_metrics = self._train_epoch(epoch)
+  File "/workspace/PedTP/GUIDE-CoT/goal_module/src/trainer.py", line 407, in _train_epoch
+    loss_mask = self.net.compute_loss_mask(
+  File "/opt/conda/envs/GoalSAR/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'VisSem' object has no attribute 'compute_loss_mask'
